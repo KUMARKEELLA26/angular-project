@@ -1,0 +1,23 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" *ngFor="let p of pArray">
+            <div class="card">
+                <div class="card-header">
+                    <img [src]="p.productImage" alt="" height="300dvh" class="card-img-top">
+                </div>
+                <div class="card-body">
+                    <h1> {{p.productName}}</h1>
+                    <h2> Manufactured By:{{p.productCompany}} </h2>
+          
+                    <label for="" class="badge bg-success text-white">
+                         INR:-{{p.productPrice}}</label>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-warning" (click)="addtocart(p)">Add to cart</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

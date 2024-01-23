@@ -1,0 +1,29 @@
+.jj{
+    border: 2px solid  black;
+    position: absolute;
+    top: 200px;
+    left: 700px;
+    width: 530px;
+    background-color:lightgray;
+    filter: drop-shadow(2px 7px 5px black);
+}
+
+.back{
+    padding: 378px;
+    background-image: url(https://www.x-cart.com/img/27093/best-shipping-company-for-small-business-raw.png   );
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+    
+
+
+.btn-success{
+    filter: drop-shadow(2px 2px 2px green);
+}
+
+.btn-danger{
+    filter: drop-shadow(2px 2px 2px red);
+}

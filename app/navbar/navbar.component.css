@@ -1,0 +1,19 @@
+.navbar{
+    height: 90px;
+}
+#badge{
+    position: relative;
+    top:-30px;
+    left: 40px;
+}
+.kk{
+    position: relative;
+    top: 14.5px;
+    left: 485px;;
+}
+
+.scr{
+    position: relative;
+    left: 450px;
+    top: -80px;
+}

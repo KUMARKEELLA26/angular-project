@@ -1,0 +1,75 @@
+<table class="">
+  <tr>
+    <th>productImage</th>
+    <th>productName</th>
+    <th>productPrice</th>
+    <th>  Remove Item</th>
+  </tr>
+
+  <tr *ngFor="let p of cartarr">
+    <td>
+      <img [src]=" p.productImage" height="100" width="100">
+    </td>
+    <td>
+      <label>
+        {{p.productName}}
+      </label>
+    </td>
+    <td>
+      <label>
+        {{p.productPrice}}
+      </label>
+    </td>
+
+    <td>
+      <button class="btn btn-danger"(click)="removeitem(p)">Remove Item</button>
+    </td>
+
+
+  </tr>
+  <tr>
+    <td></td>
+    <td>total</td>
+    <td>{{totalPrice}}</td>
+
+
+  </tr>
+</table>
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary bot" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Place Order
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Order Summary</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <label>Name</label><br>
+        <input type="text" placeholder="name"><br>
+
+        <label>Address</label><br>
+        <!-- <input type="text" placeholder="Address"><br> -->
+        <textarea name="Comments" rows="7" cols="50" style="width:100%;max-width:300px;"></textarea><br>
+
+        <label>TotalPrice</label><br>
+        <input type="text"[(ngModel)]="totalPrice" disabled placeholder="Address"><br>
+
+        <label>Payment Method</label><br>
+<select> 
+  <option>COD</option>
+</select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success"(click)="orderplaced()">Confirm Order</button>
+      </div>
+    </div>
+  </div>
+</div>

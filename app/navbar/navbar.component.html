@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-sm bg-primary  navbar-dark">
+    <div class="container-fluid">
+        
+        <a routerLink="" class="navbar-brand">
+            <h3 class="text-white">
+                Welcome To MobieKart</h3>
+        </a>
+
+
+
+
+        <div class="kk ">
+             <ul class="navbar-nav">
+            <li class="nav-item  "><a routerLink="/nav/home" class="nav-link">
+                    <h5 class="text-dark">Home </h5>
+                </a></li>
+            <li class="nav-item "><a routerLink="/nav/contact" class="nav-link">
+                    <h5 class="text-dark">Contact</h5>
+                </a></li>
+            <li class="nav-item  "><a routerLink="/nav/products" class="nav-link">
+                    <h5 class="text-dark">Products</h5>
+                </a></li>
+            <li class="nav-item"><a routerLink="/nav/cart" class="nav-link">
+                    <h5 class="text-dark ">cart</h5>
+
+                    <sup>   
+                        <span class="translate-middle badge rounded-pill bg-black" id="badge">
+                            {{cart.length}}
+                             
+                        </span>
+                    </sup>
+                </a></li>
+            
+
+            
+        </ul>
+    </div>
+    <button class="btn btn-primary text-dark" (click)="logoutcheck()">
+        <h5>logout </h5>
+    </button>
+    </div>
+</nav>
+<router-outlet></router-outlet>

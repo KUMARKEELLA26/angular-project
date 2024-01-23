@@ -1,0 +1,44 @@
+<div class="conatiner">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-3">
+
+
+            <form ngNativeValidate #form>
+                <div class="form-group">
+                    <label for="" class="form-label">productId</label>
+                    <input type="text" name="productId" id="" [(ngModel)]="pId" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="form-label">productName</label>
+                    <input type="text" name="productName" id="" [(ngModel)]="pName" class="form-control"required>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="form-label">productCompany</label>
+                    <input type="text" name="productCompany" id="" [(ngModel)]="pCompany" class="form-control"required>
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">productFeatures</label>
+                    <input type="text" name="productFeatures" id="" [(ngModel)]="pFeatures" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="form-label">productImage</label>
+                    <input type="text" name="productImage" id="" [(ngModel)]="pImage" class="form-control" required>
+                </div>
+
+
+
+                <div class="form-group d-flex justify-content-center">
+                    <button  type="button" class="btn btn-success" (click)="addproduct()">addproduct</button>
+
+                    <button class="btn btn-danger">
+                        cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

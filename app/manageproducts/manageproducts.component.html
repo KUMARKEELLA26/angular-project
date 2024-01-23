@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" *ngFor="let p of pArray">
+            <div class="card">
+                <div class="card-header">
+                    <img [src]="p.productImage" alt="" height="400" width="300" class="card-img-top">
+                </div>
+                <div class="card-body">
+                    <div *ngIf="p.pflag">
+                        <label>productName:
+                        </label>
+
+                        <input type="text" id="" [(ngModel)]="p.productName">
+
+                        <label>productCompnay:
+                        </label>
+
+                        <input type="text" id="" [(ngModel)]="p.productCompany"><br> 
+
+                        <label> Price:</label>
+                        
+                        <input type="text" id="" [(ngModel)]="p.productPrice">
+                    </div>
+
+
+
+
+                    <div *ngIf="!p.pflag">
+                        ModelName: 
+                        <h1>{{p.productName}}</h1>
+                        <p>
+                            Manufacture by: {{p.productCompany}}
+                        </p>
+                      
+                        <label for="" class="badge bg-success text-white">
+                            INR:-{{p.productPrice}}</label> 
+                    </div>
+
+
+                    <div class="card-footer">
+
+                        <button class="btn btn-success m-2" (click)="update(p)" *ngIf="p.pflag" >Savechanges</button>
+                        <button class="btn btn-warning m-2" *ngIf="!p.pflag" (click)="changeflag(p)">update</button>
+                        <button class="btn btn-danger m-2" (click)="deleteme(p)">delete</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
